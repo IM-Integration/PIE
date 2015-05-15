@@ -127,7 +127,7 @@ qubit.opentag.LibraryTag.define("intentmedia.scahotel.v1.Tag", {
             uv: ""
         }, {
             name: "Product category",
-            description: "Only needed if conversion tag is deployed on a confirmation page shared across multiple products/paths - HOTEL/FLIGHT/CAR/PACKAGE",
+            description: "Only needed if conversion tag is deployed on a confirmation page shared across multiple products/paths - HOTELS/FLIGHTS/CARS/PACKAGES",
             token: "product_category",
             uv: ""
         }, {
