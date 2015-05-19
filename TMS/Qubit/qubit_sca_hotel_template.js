@@ -43,7 +43,7 @@ qubit.opentag.LibraryTag.define("intentmedia.scahotel.v1.Tag", {
         }, {
             name: "Visitor id",
             description: "Unique user id persistent at least across the entire booking transaction session",
-            token: "visitor id",
+            token: "visitor_id",
             uv: ""
         }, {
             name: "Referrer source",
@@ -58,7 +58,7 @@ qubit.opentag.LibraryTag.define("intentmedia.scahotel.v1.Tag", {
         }, {
             name: "Active member profile",
             description: "Member profile contains data beyond initial account creation default (i.e. loyalty points, preferred airline, written reviews, etc.)",
-            token: "active member profile",
+            token: "active_member_profile",
             uv: ""
         }, {
             name: "Travel start date",
