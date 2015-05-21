@@ -1,10 +1,8 @@
-qubit.opentag.LibraryTag.define("intentmedia.scahotel.v1.Tag", {
+qubit.opentag.LibraryTag.define("intentmedia.sca.v1.Tag", {
     config: {
-        name: "Intent Media - Hotel Search Compare Ads",
-        description: "To be placed on any page in the hotel path",
+        name: "Intent Media - Search Compare Ads",
+        description: "Collects user travel search data in order to serve and measure comparison travel ads across Flight, Hotel, and Car booking paths",
         html: "",
-        url: "a.cdn.intentmedia.net/javascripts/v1/intent_media_core.js",
-        async: true,
         parameters: [{
             name: "Intent Media Site Name",
             description: "Unique site id provided by Intent Media",
@@ -64,6 +62,7 @@ qubit.opentag.LibraryTag.define("intentmedia.scahotel.v1.Tag", {
             name: "Tag path",
             description: "Mandatory value for the tag path - default value is '//a.cdn.intentmedia.net/javascripts/v1/intent_media_core.js",
             token: "tag_path",
+            defaultValue: "//a.cdn.intentmedia.net/javascripts/v1/intent_media_core.js",
             uv: ""
         }, {
             name: "Show on-page ads",
@@ -369,7 +368,11 @@ qubit.opentag.LibraryTag.define("intentmedia.scahotel.v1.Tag", {
     },
 
     script: function () {
-
+            var script = document.createElement("script");
+            var url = window.IntentMediaProperties.tag_path; 
+            script.src = url;
+            script.async = true;
+            document.getElementsByTagName("head")[0].appendChild(script);
     },
 
     pre: function () {
