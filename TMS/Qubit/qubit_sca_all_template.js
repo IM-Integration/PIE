@@ -255,6 +255,16 @@ qubit.opentag.LibraryTag.define("intentmedia.sca.v1.Tag", {
             token: "hotel_market_id",
             uv: ""
         }, {
+            name: "Hotel brand code",
+            description: "Chain code for hotel brand in user's search, or of selected/booked property", 
+            token: "hotel_brand_code",
+            uv: ""
+        }, {
+            name: "Hotel value in package",
+            description: "Package Purchase amount of the hotel only - no currency symbol, 2 decimal places", 
+            token: "hotel_value_in_package",
+            uv: ""
+        }, {
             name: "Conversion type",
             description: "Type of hotel product that was purchased (if applicable) - OPAQUE/RETAIL",
             token: "conversion_type",
@@ -263,11 +273,6 @@ qubit.opentag.LibraryTag.define("intentmedia.sca.v1.Tag", {
             name: "Promotional code",
             description: "Was there a promotion code applied? Y/N",
             token: "promo_code",
-            uv: ""
-        }, {
-            name: "Hotel brand code",
-            description: "Chain code for hotel brand in user's search, or of selected/booked property", 
-            token: "hotel_brand_code",
             uv: ""
         }, {
             name: "Car class",
@@ -438,6 +443,7 @@ qubit.opentag.LibraryTag.define("intentmedia.sca.v1.Tag", {
             hotel_property_id: '' + this.valueForToken("hotel_property_id"),
             hotel_market_id: '' + this.valueForToken("hotel_market_id"),
             hotel_brand_code: '' + this.valueForToken("hotel_brand_code"), 
+            hotel_value_in_package: '' + this.valueForToken("hotel_value_in_package"),
             car_class: '' + this.valueForToken("car_class"), 
             car_rental_agency: '' + this.valueForToken("car_rental_agency"),
 
